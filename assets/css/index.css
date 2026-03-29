@@ -3,46 +3,66 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: #f3f4f6;
-    padding: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    align-items: flex-start;
+    background: #eef2f7;
+    padding: 32px 16px;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 #form-box {
     background: #ffffff;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #dbe2ea;
     border-radius: 14px;
-    width: min(700px, 92vw);
-    padding: 24px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    width: min(860px, 96vw);
+    padding: 28px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
 #header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 1.9rem;
 }
 
 form {
     display: grid;
-    gap: 18px;
+    gap: 16px;
+}
+
+#profile,
+#contact-details,
+#Skills,
+#languages,
+#work-experience,
+#education {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fcfdff;
 }
 
 h2 {
-    margin: 0 0 10px;
-    color: #111827;
+    margin: 0 0 12px;
+    color: #1f2937;
+    font-size: 1.15rem;
 }
 
 label {
     color: #374151;
     font-size: 14px;
+    font-weight: 600;
 }
 
 input,
 textarea,
 button {
     margin-top: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 input[type="text"],
@@ -60,9 +80,9 @@ textarea {
 }
 
 textarea {
-    min-height: 120px;
+    min-height: 130px;
     resize: vertical;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 input::placeholder,
@@ -72,17 +92,87 @@ textarea::placeholder {
 
 #add-skill,
 #add-language,
+#add-experience,
+#add-education,
 #submit input[type="submit"] {
-    border: 1px solid #d1d5db;
-    background: #f9fafb;
-    color: #111827;
+    border: 1px solid #cfd8e3;
+    background: #f8fafc;
+    color: #0f172a;
     border-radius: 8px;
-    padding: 9px 12px;
+    padding: 10px 12px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 #add-skill:hover,
 #add-language:hover,
+#add-experience:hover,
+#add-education:hover,
 #submit input[type="submit"]:hover {
-    background: #f3f4f6;
+    background: #eef2f7;
+}
+
+#skills-wrapper > div,
+#languages-wrapper > div,
+#experience-wrapper > div,
+#education-wrapper > div {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+#skills-wrapper > div input,
+#languages-wrapper > div input,
+#education-wrapper > div input {
+    margin-bottom: 10px;
+}
+
+#skills-wrapper > div button,
+#languages-wrapper > div button {
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.simple-row input {
+    flex: 1;
+}
+
+.remove-entry {
+    border: 1px solid #ef4444;
+    background: #fff1f2;
+    color: #b91c1c;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.remove-entry:hover {
+    background: #ffe4e6;
+}
+
+.experience-item,
+.education-item {
+    display: grid !important;
+    gap: 6px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px;
+    background: #ffffff;
+    margin-bottom: 12px;
+}
+
+.experience-item .remove-entry,
+.education-item .remove-entry {
+    justify-self: flex-start;
+    margin-top: 4px;
+}
+
+#submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#submit input[type="submit"] {
+    min-width: 150px;
 }

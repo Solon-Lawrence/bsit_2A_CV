@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/index.css?v=3">
+    <link rel="stylesheet" href="./assets/css/index.css?v=5">
 </head>
 <body>
     
@@ -39,7 +39,10 @@
             <h2>Skills</h2>
             <label for="skills">Skills:</label><br>
             <div id="skills-wrapper">
-                <input type="text" name="skills[]" placeholder="e.g. HTML"><br>
+                <div class="dynamic-row simple-row">
+                    <input type="text" name="skills[]" placeholder="e.g. HTML">
+                    <button type="button" class="remove-entry">Remove</button>
+                </div>
             </div>
             <button type="button" id="add-skill">+ Add Skill</button>
         </div>
@@ -48,9 +51,53 @@
             <h2>Languages</h2>
             <label for="languages">Languages:</label><br>
             <div id="languages-wrapper">
-                <input type="text" name="languages[]" placeholder="e.g. English"><br>
+                <div class="dynamic-row simple-row">
+                    <input type="text" name="languages[]" placeholder="e.g. English">
+                    <button type="button" class="remove-entry">Remove</button>
+                </div>
             </div>
             <button type="button" id="add-language">+ Add Language</button>
+        </div>
+
+        <div id="work-experience">
+            <h2>Work Experience</h2>
+            <div id="experience-wrapper">
+                <div class="dynamic-row experience-item">
+                    <label>Job Title:</label>
+                    <input type="text" name="work_title[]" placeholder="e.g. Web Developer">
+
+                    <label>Period:</label>
+                    <input type="text" name="work_period[]" placeholder="e.g. Jan 2022 - Dec 2023">
+
+                    <label>Company / Location:</label>
+                    <input type="text" name="work_company[]" placeholder="e.g. ABC Company - Manila">
+
+                    <label>Description (one point per line):</label>
+                    <textarea name="work_description[]" rows="4" placeholder="- Built responsive web pages"></textarea>
+
+                    <button type="button" class="remove-entry">Remove Experience</button>
+                </div>
+            </div>
+            <button type="button" id="add-experience">+ Add Work Experience</button>
+        </div>
+
+        <div id="education">
+            <h2>Education</h2>
+            <div id="education-wrapper">
+                <div class="dynamic-row education-item">
+                    <label>Degree / Program:</label>
+                    <input type="text" name="education_degree[]" placeholder="e.g. Bachelor of Science in IT">
+
+                    <label>Period:</label>
+                    <input type="text" name="education_period[]" placeholder="e.g. 2021 - 2025">
+
+                    <label>School / Location:</label>
+                    <input type="text" name="education_school[]" placeholder="e.g. XYZ University - Manila">
+
+                    <button type="button" class="remove-entry">Remove Education</button>
+                </div>
+            </div>
+            <button type="button" id="add-education">+ Add Education</button>
         </div>
 
         <div id="submit">
@@ -61,5 +108,5 @@
     </div>
 
 </body>
-<script src="./assets/js/index.js?v=3"></script>
+<script src="./assets/js/index.js?v=4"></script>
 </html>
