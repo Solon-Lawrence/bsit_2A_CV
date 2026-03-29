@@ -21,8 +21,7 @@
     
         <div>
             <img src="<?=  $path ?>" alt="">
-            <p>Name: <?= $_POST['name']?></p><br>
-            <p>Age: <?= $_POST['age']?></p>
+            <h4>Name: <?= $_POST['name']?></h4><br>
         </div>
 
 </body>
