@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#main-box {
+    display: flex;
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    flex-grow: 1;
+}
+
+#aside {
+    border: 1px solid black;
+    background-color: #333e51;
+    padding: 10px;
+}
+
+#profile {
+    box-sizing: border-box;
+}
+
+#pImage {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: 50px auto;
+}
+
+#pImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#main {
+    border: 1px solid black;
+    flex: 1;
+}
